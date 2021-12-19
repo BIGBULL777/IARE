@@ -30,11 +30,11 @@ class CitizenSerializer(serializers.ModelSerializer):
 #         model = UserModel
 #         fields = ("username", "password")
 
-# class UserSerializer(serializers.ModelSerializer):
-#     class Meta:
-#         model = citizen
-#         fields = ('username', 'password','first_name', 'last_name')
-#         write_only_fields = ('password',)
+class UserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = citizen
+        fields = ('username', 'password','first_name', 'last_name')
+        write_only_fields = ('password',)
 
 class loginSerializer(serializers.ModelSerializer):
     class Meta:
